@@ -6,7 +6,7 @@ def decor(func):
     '''декоратор виконує друк назви функції і часу, коли вона була викликана.'''
     def wrap(*args, **kwargs):
         print(f'Start Function name < {func.__name__} > start time - {time.time()}')
-        func(*args, **kwargs)
+        return func(*args, **kwargs)
     return wrap
 
 @decor

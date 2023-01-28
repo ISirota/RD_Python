@@ -14,4 +14,9 @@ try:
 
 except Exception as e:
     print(f'{e}')
-print(10 * '=')
+else:
+    print('No error')
+
+finally:
+    print(10 * '=')
+
