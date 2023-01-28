@@ -6,8 +6,11 @@
 '''
 import json
 
-with open('telbook.json') as dfile:
-    telefon_book = json.load(dfile)
+try:
+    with open('telbook.json') as dfile:
+        telefon_book = json.load(dfile)
+except FileNotFoundError:
+    telefon_book = {}
 
 #print (telefon_book)
 

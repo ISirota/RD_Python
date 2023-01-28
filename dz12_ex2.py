@@ -2,13 +2,15 @@
 
 import time
 
+
 def decor(func):
-    '''декоратор виконує друк назви функції і часу, коли вона була викликана.'''
+    # декоратор виконує друк назви функції і часу, коли вона була викликана.
     def wrap(*args, **kwargs):
-        func(*args, **kwargs)
-        with open('log_decor.log', 'a') as file:
+        rezult = func(*args, **kwargs)
+        with open('log_decor.log', 'a+') as file:
             file.write(f'Function name < {func.__name__} > start time - {time.asctime()}')
             file.write('\n')
+        return rezult
     return wrap
 
 @decor
@@ -17,6 +19,7 @@ def erer(*args, **kwargs):
 
 @decor
 def bugers(a, name):
+    # function bugers
     print(a, name)
 
 erer()
