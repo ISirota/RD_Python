@@ -12,8 +12,7 @@ def fib(n):
 
 
 n = int(input("Ведіть порядковий номер елемента послідовності Фібоначчі "))
-k = fib(n)
+
 # print(k)
-for item in k:
-    pass
-print("Елемент послідовності Фібоначчі за порядковим номером ", n, ' = ', item)
+for i in range(n):
+    print(next(fib(i)))
