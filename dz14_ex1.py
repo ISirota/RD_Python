@@ -22,7 +22,7 @@ while True:
             errornomber = True
             while errornomber:
                 new_fone = input("введіть номер телефону: ")
-                if re.findall(r'\+380\d{9}$|380\d{9}$|0\d{9}$', new_fone):
+                if re.match(r'\+380\d{9}$|380\d{9}$|0\d{9}$', new_fone):
                     print('ok')
                     errornomber = False
                 else:
