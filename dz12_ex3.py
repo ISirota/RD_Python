@@ -1,7 +1,11 @@
 #3. В попередньо написаний кастомний Exception додати запис помилки і час її виникнення у файл.
 
+
 import time
 
+class MyCustomException(Exception):
+    def __init__(self, message):
+        pass
 try:
     # Код в якому ловимо помилки
     # k = 5 / 0
