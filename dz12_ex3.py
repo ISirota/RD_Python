@@ -1,20 +1,23 @@
 #3. В попередньо написаний кастомний Exception додати запис помилки і час її виникнення у файл.
 
-
 import time
 
-class MyCustomException(Exception):
-    def __init__(self, message):
-        pass
-try:
-    # Код в якому ловимо помилки
-    # k = 5 / 0
-    k = 5+'dfs'
-    # print(my_list[gf])
+class MyCustomException():
+        def __enter__(self):
+            # print('start')
+            pass
+        def __exit__(self, exc_type, exc_val, exc_tb):
+            file = open('error.log', 'a')
+            if exc_type == None:
+                file.write(f'Not error. Start -  {time.asctime()}\n')
+                # print('Not error')
+            else:
+                file.write(f'error -  {exc_val} . Start -  {time.asctime()}\n')
+                # print(f'error -  {exc_val} . type{exc_type}. tb {exc_tb} Start -  {time.asctime()}')
+            return True
+            file.close()
 
-except Exception as e:
-    print(f'{e}')
-    with open('error.log', 'a') as file:
-        file.write(f'{e}' " > start time - ")
-        file.write(f'{time.asctime()}')
-        file.write('\n')
+with MyCustomException():
+# місце перевірки помилок
+    # print('start my')
+    k = 5 / 0
