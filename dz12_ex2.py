@@ -11,16 +11,20 @@ def decor(func):
             file.write(f'Function name < {func.__name__} > start time - {time.asctime()}')
             file.write('\n')
         return rezult
+
     return wrap
 
+
 @decor
-def erer(*args, **kwargs):
+def erer():
     print('function erer')
+
 
 @decor
 def bugers(a, name):
     # function bugers
     print(a, name)
+
 
 erer()
 time.sleep(3)
