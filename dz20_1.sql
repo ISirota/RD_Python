@@ -1,4 +1,3 @@
-
 create table main.users
 (
     id         integer /*autoincrement needs PK*/,
