@@ -1,6 +1,6 @@
 create table main.users
 (
-    id         integer /*autoincrement needs PK*/,
+    id         integer PRIMARY KEY AUTOINCREMENT,
     first_name TEXT,
     last_name  TEXT,
     age        integer
