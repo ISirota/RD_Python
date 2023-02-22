@@ -1,0 +1,1 @@
+--select  purchase.id, users.first_name, users.last_name, books.title from purchase join users  books on TRUE
