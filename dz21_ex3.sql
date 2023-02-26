@@ -1,1 +1,0 @@
-select age, count(age) as users from users group by age;
