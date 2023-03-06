@@ -1,0 +1,14 @@
+.my-table {
+    border: 5px solid black;
+    border-collapse: collapse;
+    width: 10px;
+    text-align: center;
+}
+
+th, td {
+    border: 2px solid black;
+}
+
+.id-cell {
+    font-style: italic;
+}
