@@ -1,0 +1,1 @@
+select books.title, fname, lname from books join (select purchase.id, purchase.book_id as books, users.first_name as fname, users.last_name as lname from purchase join users on purchase.user_id = users.id) on books.id = books order by fname, lname
